@@ -13,16 +13,16 @@ Replace all occurences in variable with replacement:
 require_once('SerializedReplace.php');
 
 $serialized = serialize(
-serialize(
-  array(
-    serialize('cool index') => serialize(
-      array(
-        'this is long string' => serialize('long long long'),
-        29 => array('just long string')
+  serialize(
+    array(
+      serialize('cool index') => serialize(
+        array(
+          'this is long string' => serialize('long long long'),
+          29 => array('just long string')
+        )
       )
     )
   )
-)
 );
 $sr = new SerializedReplace($serialized);
 
