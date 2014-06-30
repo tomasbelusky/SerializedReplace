@@ -1,7 +1,7 @@
 <?php
   /*
     Serialized Replace
-    Replace all occurences in variable with replacement.
+    Replace all occurrences in variable with replacement.
     Variable can be serialized any times (even 0). Variable's
     components can be also serialized any times (keys and
     values in array). Support of regular expression replace
@@ -122,7 +122,7 @@
       /**
        * Replace pattern in given variable
        *  @param var: subject for replacing function
-       *  @return variable with replaced pattern occurences
+       *  @return variable with replaced pattern occurrences
        */
       private function doReplace($var) {
         if(is_array($var)) {
@@ -132,7 +132,7 @@
             $var[$newkey] = $this->doReplace($value);
           }
         }
-        else { // do actial replace
+        else { // do actual replace
           $var = call_user_func($this->function, $this->pattern, $this->replacement, $var);
         }
 
@@ -140,7 +140,7 @@
       }
 
       /**
-       * Inicialize class variables and then do replace
+       * Initialize class variables and then do replace
        *  @param pattern: pattern to be replaced
        *  @param replacement: replacement of pattern
        *  @param preg: use preg_match or str_replace

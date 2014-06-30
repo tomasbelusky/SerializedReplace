@@ -1,7 +1,7 @@
 Serialized Replace
 ==================
 
-Replace all occurences in variable with replacement:
+Replace all occurrences in variable with replacement:
 
 * variable can be serialized any times (even 0)
 * variable's components can be also serialized any times (keys and values in array)
